@@ -11,7 +11,7 @@ import SwiftUI
 struct SortVisualizerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SortVisualizerView()
         }
     }
 }
