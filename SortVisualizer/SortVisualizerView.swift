@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct SortVisualizerView: View {
+
+    // MARK: Properties
+    
+    @StateObject
+    private var viewModel = SortVisualizerViewModel()
+    
     @State
     private var input: String = ""
+    
+    // MARK: Body
     
     var body: some View {
         VStack {
             Spacer()
             
-            ListInputView(rawInput: $input)
+            ListInputView(rawInput: $input) { rawInput in
+                let list = parse(rawInput)
+                viewModel.sort(list)
+            }
             SortResultsView(
                 bubbleSortTime: "", 
                 insertionSortTime: "", 
@@ -27,7 +38,18 @@ struct SortVisualizerView: View {
         }
         .padding()
     }
+    
+    // MARK: Internal Methods
+    
+    private func parse(_ input: String) -> [Int] {
+        input
+            .split(separator: ",")
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .compactMap { Int($0) }
+    }
 }
+
+// MARK: Preview
 
 struct SortVisualizerView_Previews: PreviewProvider {
     static var previews: some View {

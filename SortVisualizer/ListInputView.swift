@@ -26,8 +26,9 @@ struct ListInputView: View {
     
     var body: some View {
         VStack {
-            Text("Type here the numbers to be sorted, separated by commas:")
+            Text("Type here the numbers to be sorted, separated by commas, making sure they're correctly typed:")
             TextField("Example: 1, 102, 521, 23, 15, 2, 125", text: listRawInput)
+                .font(.system(size: 10))
             Button("Sort") {
                 tapHandler?(listRawInput.wrappedValue)
             }

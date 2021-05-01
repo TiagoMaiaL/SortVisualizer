@@ -12,6 +12,7 @@ struct SortVisualizerApp: App {
     var body: some Scene {
         WindowGroup {
             SortVisualizerView()
+                .frame(width: 600, height: 400, alignment: .center)
         }
     }
 }
