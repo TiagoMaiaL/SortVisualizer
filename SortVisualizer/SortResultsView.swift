@@ -30,17 +30,17 @@ struct SortResultsView: View {
             
             HStack {
                 Text("Insertion sort time: ")
-                Text(bubbleSortTime)
+                Text(insertionSortTime)
             }
             
             HStack {
                 Text("Selection sort time: ")
-                Text(bubbleSortTime)
+                Text(selectionSortTime)
             }
             
             HStack {
                 Text("Sorted list: ")
-                Text(bubbleSortTime)
+                Text(sortedListText)
             }
         }
     }

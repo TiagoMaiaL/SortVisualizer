@@ -28,10 +28,10 @@ struct SortVisualizerView: View {
                 viewModel.sort(list)
             }
             SortResultsView(
-                bubbleSortTime: "", 
-                insertionSortTime: "", 
-                selectionSortTime: "", 
-                sortedListText: ""
+                bubbleSortTime: viewModel.bubbleSortTime, 
+                insertionSortTime: viewModel.insertionSortTime, 
+                selectionSortTime: viewModel.selectionSortTime, 
+                sortedListText: viewModel.sortedList
             )
             
             Spacer()
