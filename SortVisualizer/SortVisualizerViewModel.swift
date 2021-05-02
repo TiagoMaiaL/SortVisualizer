@@ -46,9 +46,7 @@ final class SortVisualizerViewModel: ObservableObject {
         var sortedList: [Int]!
         
         performOperation { 
-            
             sortedList = list.selectionSorted()
-            debugPrint(sortedList)
         } measuringTime: { secondsText in
             selectionSortTime = secondsText
             self.sortedList = sortedList

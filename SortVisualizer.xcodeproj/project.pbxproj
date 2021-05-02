@@ -10,18 +10,36 @@
 		5A4D839A263CE4E900B871FA /* ListInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D8399263CE4E900B871FA /* ListInputView.swift */; };
 		5A4D839D263CE6F500B871FA /* SortResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D839C263CE6F500B871FA /* SortResultsView.swift */; };
 		5A4D83A2263CEA4100B871FA /* SortVisualizerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D83A1263CEA4100B871FA /* SortVisualizerViewModel.swift */; };
-		5A4D83A6263CED8000B871FA /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D83A5263CED8000B871FA /* Collection+Sort.swift */; };
+		5A4D83A6263CED8000B871FA /* Array+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D83A5263CED8000B871FA /* Array+Sort.swift */; };
+		5A4D83B0263F55A800B871FA /* SelectionSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D83AF263F55A800B871FA /* SelectionSortTests.swift */; };
+		5A4D83C0263F6D5D00B871FA /* ListToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D83BF263F6D5D00B871FA /* ListToStringTests.swift */; };
+		5A4D83CA263F6DF700B871FA /* Array+DisplayText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D83C9263F6DF700B871FA /* Array+DisplayText.swift */; };
 		5AA7450D263CD88200E74021 /* SortVisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7450C263CD88200E74021 /* SortVisualizerApp.swift */; };
 		5AA7450F263CD88200E74021 /* SortVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7450E263CD88200E74021 /* SortVisualizerView.swift */; };
 		5AA74511263CD88600E74021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA74510263CD88600E74021 /* Assets.xcassets */; };
 		5AA74514263CD88600E74021 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA74513263CD88600E74021 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5A4D83B2263F55A800B871FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AA74501263CD88100E74021 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA74508263CD88100E74021;
+			remoteInfo = SortVisualizer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5A4D8399263CE4E900B871FA /* ListInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInputView.swift; sourceTree = "<group>"; };
 		5A4D839C263CE6F500B871FA /* SortResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortResultsView.swift; sourceTree = "<group>"; };
 		5A4D83A1263CEA4100B871FA /* SortVisualizerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVisualizerViewModel.swift; sourceTree = "<group>"; };
-		5A4D83A5263CED8000B871FA /* Collection+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sort.swift"; sourceTree = "<group>"; };
+		5A4D83A5263CED8000B871FA /* Array+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Sort.swift"; sourceTree = "<group>"; };
+		5A4D83AD263F55A800B871FA /* SortVisualizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortVisualizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4D83AF263F55A800B871FA /* SelectionSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSortTests.swift; sourceTree = "<group>"; };
+		5A4D83B1263F55A800B871FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A4D83BF263F6D5D00B871FA /* ListToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToStringTests.swift; sourceTree = "<group>"; };
+		5A4D83C9263F6DF700B871FA /* Array+DisplayText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DisplayText.swift"; sourceTree = "<group>"; };
 		5AA74509263CD88100E74021 /* SortVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA7450C263CD88200E74021 /* SortVisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVisualizerApp.swift; sourceTree = "<group>"; };
 		5AA7450E263CD88200E74021 /* SortVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVisualizerView.swift; sourceTree = "<group>"; };
@@ -32,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A4D83AA263F55A800B871FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AA74506263CD88100E74021 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A4D83AE263F55A800B871FA /* SortVisualizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A4D83AF263F55A800B871FA /* SelectionSortTests.swift */,
+				5A4D83BF263F6D5D00B871FA /* ListToStringTests.swift */,
+				5A4D83B1263F55A800B871FA /* Info.plist */,
+			);
+			path = SortVisualizerTests;
+			sourceTree = "<group>";
+		};
 		5AA74500263CD88100E74021 = {
 			isa = PBXGroup;
 			children = (
 				5AA7450B263CD88200E74021 /* SortVisualizer */,
+				5A4D83AE263F55A800B871FA /* SortVisualizerTests */,
 				5AA7450A263CD88100E74021 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5AA74509263CD88100E74021 /* SortVisualizer.app */,
+				5A4D83AD263F55A800B871FA /* SortVisualizerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +103,8 @@
 				5A4D8399263CE4E900B871FA /* ListInputView.swift */,
 				5A4D839C263CE6F500B871FA /* SortResultsView.swift */,
 				5A4D83A1263CEA4100B871FA /* SortVisualizerViewModel.swift */,
-				5A4D83A5263CED8000B871FA /* Collection+Sort.swift */,
+				5A4D83A5263CED8000B871FA /* Array+Sort.swift */,
+				5A4D83C9263F6DF700B871FA /* Array+DisplayText.swift */,
 				5AA74510263CD88600E74021 /* Assets.xcassets */,
 				5AA74515263CD88600E74021 /* Info.plist */,
 				5AA74516263CD88600E74021 /* SortVisualizer.entitlements */,
@@ -86,6 +124,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5A4D83AC263F55A800B871FA /* SortVisualizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A4D83B4263F55A800B871FA /* Build configuration list for PBXNativeTarget "SortVisualizerTests" */;
+			buildPhases = (
+				5A4D83A9263F55A800B871FA /* Sources */,
+				5A4D83AA263F55A800B871FA /* Frameworks */,
+				5A4D83AB263F55A800B871FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A4D83B3263F55A800B871FA /* PBXTargetDependency */,
+			);
+			name = SortVisualizerTests;
+			productName = SortVisualizerTests;
+			productReference = 5A4D83AD263F55A800B871FA /* SortVisualizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5AA74508263CD88100E74021 /* SortVisualizer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AA74519263CD88600E74021 /* Build configuration list for PBXNativeTarget "SortVisualizer" */;
@@ -112,6 +168,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					5A4D83AC263F55A800B871FA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5AA74508263CD88100E74021;
+					};
 					5AA74508263CD88100E74021 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -131,11 +191,19 @@
 			projectRoot = "";
 			targets = (
 				5AA74508263CD88100E74021 /* SortVisualizer */,
+				5A4D83AC263F55A800B871FA /* SortVisualizerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A4D83AB263F55A800B871FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AA74507263CD88100E74021 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,14 +216,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A4D83A9263F55A800B871FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4D83C0263F6D5D00B871FA /* ListToStringTests.swift in Sources */,
+				5A4D83B0263F55A800B871FA /* SelectionSortTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AA74505263CD88100E74021 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5AA7450F263CD88200E74021 /* SortVisualizerView.swift in Sources */,
+				5A4D83CA263F6DF700B871FA /* Array+DisplayText.swift in Sources */,
 				5A4D839D263CE6F500B871FA /* SortResultsView.swift in Sources */,
 				5A4D83A2263CEA4100B871FA /* SortVisualizerViewModel.swift in Sources */,
-				5A4D83A6263CED8000B871FA /* Collection+Sort.swift in Sources */,
+				5A4D83A6263CED8000B871FA /* Array+Sort.swift in Sources */,
 				5AA7450D263CD88200E74021 /* SortVisualizerApp.swift in Sources */,
 				5A4D839A263CE4E900B871FA /* ListInputView.swift in Sources */,
 			);
@@ -163,7 +241,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5A4D83B3263F55A800B871FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA74508263CD88100E74021 /* SortVisualizer */;
+			targetProxy = 5A4D83B2263F55A800B871FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5A4D83B5263F55A800B871FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8Y5X4LQQ8S;
+				INFOPLIST_FILE = SortVisualizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tiago.lopes.SortVisualizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortVisualizer.app/Contents/MacOS/SortVisualizer";
+			};
+			name = Debug;
+		};
+		5A4D83B6263F55A800B871FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8Y5X4LQQ8S;
+				INFOPLIST_FILE = SortVisualizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tiago.lopes.SortVisualizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortVisualizer.app/Contents/MacOS/SortVisualizer";
+			};
+			name = Release;
+		};
 		5AA74517263CD88600E74021 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -330,6 +456,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A4D83B4263F55A800B871FA /* Build configuration list for PBXNativeTarget "SortVisualizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4D83B5263F55A800B871FA /* Debug */,
+				5A4D83B6263F55A800B871FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5AA74504263CD88100E74021 /* Build configuration list for PBXProject "SortVisualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
