@@ -8,10 +8,23 @@
 import Foundation
 
 extension Array where Element: Comparable {
-    
+
     func bubbleSorted() -> Self {
-        // TODO: Sort elements.
-        return self
+        guard count > 1 else {
+            return self
+        }
+        
+        var copy = self
+        
+        for _ in 0 ..< copy.count {
+            for j in 1 ..< copy.count {
+                if copy[j - 1] > copy[j] {
+                    copy.swapAt(j - 1, j)
+                }
+            }
+        }
+        
+        return copy
     }
     
     func selectionSorted() -> Self {
