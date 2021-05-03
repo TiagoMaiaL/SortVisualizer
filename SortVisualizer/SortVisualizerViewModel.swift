@@ -35,32 +35,27 @@ final class SortVisualizerViewModel: ObservableObject {
     // MARK: Private methods
     
     private func computeBubbleSort(for list: [Int]) {
+        var sortedList: [Int]!
+        
         performOperation {
-            // TODO: Bubble sort
+            sortedList = list.bubbleSorted()
         } measuringTime: { secondsText in
-            
+            bubbleSortTime = secondsText
+            self.sortedList = sortedList.displayText
         }
     }
     
     private func computeSelectionSort(for list: [Int]) {
-        var sortedList: [Int]!
-        
         performOperation { 
-            sortedList = list.selectionSorted()
+            _ = list.selectionSorted()
         } measuringTime: { secondsText in
             selectionSortTime = secondsText
-            self.sortedList = sortedList
-                .map(String.init)!
-                .filter { $0.isNumber }
-                .reduce("", { listText, elementText -> String in
-                    "\(listText), \(elementText)"
-                })
         }
     }
     
     private func computeInsertionSort(for list: [Int]) {
         performOperation { 
-            // TODO: insertion sort
+            _ = list.insertionSorted()
         } measuringTime: { secondsText in
             insertionSortTime = secondsText
         }
@@ -71,8 +66,10 @@ final class SortVisualizerViewModel: ObservableObject {
         operation()
         let end = DispatchTime.now().uptimeNanoseconds
         
-        let seconds = (end - start) / 1_000_000_000
-        let secondsText = "\(seconds) seconds"
-        timeTextHandler(secondsText)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        let nanosecondsText = formatter.string(from: NSNumber(value: end - start)) ?? ""
+        
+        timeTextHandler("\(nanosecondsText) Nanoseconds")
     }
 }
