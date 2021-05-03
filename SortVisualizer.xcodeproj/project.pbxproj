@@ -83,6 +83,44 @@
 			path = SortVisualizerTests;
 			sourceTree = "<group>";
 		};
+		5A4D83DD263F91BA00B871FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AA7450E263CD88200E74021 /* SortVisualizerView.swift */,
+				5A4D8399263CE4E900B871FA /* ListInputView.swift */,
+				5A4D839C263CE6F500B871FA /* SortResultsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A4D83DE263F91CB00B871FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A4D83A1263CEA4100B871FA /* SortVisualizerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A4D83DF263F91DF00B871FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A4D83A5263CED8000B871FA /* Array+Sort.swift */,
+				5A4D83C9263F6DF700B871FA /* Array+DisplayText.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A4D83E0263F91F600B871FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AA74515263CD88600E74021 /* Info.plist */,
+				5AA74510263CD88600E74021 /* Assets.xcassets */,
+				5AA7450C263CD88200E74021 /* SortVisualizerApp.swift */,
+				5AA74516263CD88600E74021 /* SortVisualizer.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5AA74500263CD88100E74021 = {
 			isa = PBXGroup;
 			children = (
@@ -104,16 +142,10 @@
 		5AA7450B263CD88200E74021 /* SortVisualizer */ = {
 			isa = PBXGroup;
 			children = (
-				5AA7450C263CD88200E74021 /* SortVisualizerApp.swift */,
-				5AA7450E263CD88200E74021 /* SortVisualizerView.swift */,
-				5A4D8399263CE4E900B871FA /* ListInputView.swift */,
-				5A4D839C263CE6F500B871FA /* SortResultsView.swift */,
-				5A4D83A1263CEA4100B871FA /* SortVisualizerViewModel.swift */,
-				5A4D83A5263CED8000B871FA /* Array+Sort.swift */,
-				5A4D83C9263F6DF700B871FA /* Array+DisplayText.swift */,
-				5AA74510263CD88600E74021 /* Assets.xcassets */,
-				5AA74515263CD88600E74021 /* Info.plist */,
-				5AA74516263CD88600E74021 /* SortVisualizer.entitlements */,
+				5A4D83E0263F91F600B871FA /* Supporting Files */,
+				5A4D83DD263F91BA00B871FA /* Views */,
+				5A4D83DE263F91CB00B871FA /* ViewModel */,
+				5A4D83DF263F91DF00B871FA /* Extensions */,
 				5AA74512263CD88600E74021 /* Preview Content */,
 			);
 			path = SortVisualizer;
@@ -418,14 +450,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SortVisualizer/SortVisualizer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SortVisualizer/Supporting Files/SortVisualizer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SortVisualizer/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Y5X4LQQ8S;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SortVisualizer/Info.plist;
+				INFOPLIST_FILE = "SortVisualizer/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -442,14 +474,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SortVisualizer/SortVisualizer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SortVisualizer/Supporting Files/SortVisualizer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SortVisualizer/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Y5X4LQQ8S;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SortVisualizer/Info.plist;
+				INFOPLIST_FILE = "SortVisualizer/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
