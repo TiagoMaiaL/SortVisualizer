@@ -46,7 +46,27 @@ extension Array where Element: Comparable {
         guard count > 1 else {
             return self
         }
+
+        var sorted = [self[0]]
         
-        return self
+        for i in 1 ..< count {
+            let currentElement = self[i]
+            
+            for j in 0 ..< sorted.count {
+                if currentElement <= sorted[j] {
+                    sorted.insert(currentElement, at: j)
+                    break
+                    
+                } else if j == sorted.count - 1, currentElement > sorted[j] {
+                    sorted.append(currentElement)
+                    break
+                    
+                } else {
+                    continue
+                }
+            }
+        }
+        
+        return sorted
     }
 }
