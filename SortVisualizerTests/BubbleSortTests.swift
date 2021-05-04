@@ -33,8 +33,8 @@ class BubbleSortTests: XCTestCase {
     }
     
     func testSortingArrayWithMultipleElements() {
-        let numbers = [2005, 12, 5, 54, 21, 1, 23, 2, 66, 3, 155]
-        XCTAssertEqual(numbers.bubbleSorted(), [1, 2, 3, 5, 12, 21, 23, 54, 66, 155, 2005])
+        let numbers = [49, 150, 58, 59, 165, 20, 150, 163, 119, 58]
+        XCTAssertEqual(numbers.bubbleSorted(), [20, 49, 58, 58, 59, 119, 150, 150, 163, 165])
     }
     
     func testSortingArrayWithTwoEqualElements() {
@@ -48,8 +48,8 @@ class BubbleSortTests: XCTestCase {
     }
     
     func testSortingArrayWithRepeatedElements() {
-        let numbers = [3, 3, 2, 2, 1, 5, 5, 10, 10, 5, 10, 2, 1]
-        XCTAssertEqual(numbers.bubbleSorted(), [1, 1, 2, 2, 2, 3, 3, 5, 5, 5, 10, 10, 10])
+        let numbers = [161, 161, 161, 195, 195, 195, 130, 13, 99, 80, 120, 120]
+        XCTAssertEqual(numbers.bubbleSorted(), [13, 80, 99, 120, 120, 130, 161, 161, 161, 195, 195, 195])
     }
 
 }

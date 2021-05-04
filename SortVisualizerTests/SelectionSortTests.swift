@@ -33,8 +33,8 @@ class SelectionSortTests: XCTestCase {
     }
     
     func testSortingArrayWithMultipleElements() {
-        let numbers = [2005, 12, 5, 54, 21, 1, 23, 2, 66, 3, 155]
-        XCTAssertEqual(numbers.selectionSorted(), [1, 2, 3, 5, 12, 21, 23, 54, 66, 155, 2005])
+        let numbers = [555, 12, 254, 124, 421, 1, 23, 2, 66, 3, 155]
+        XCTAssertEqual(numbers.selectionSorted(), [1, 2, 3, 12, 23, 66, 124, 155, 254, 421, 555])
     }
     
     func testSortingArrayWithTwoEqualElements() {
@@ -48,7 +48,7 @@ class SelectionSortTests: XCTestCase {
     }
     
     func testSortingArrayWithRepeatedElements() {
-        let numbers = [3, 3, 2, 2, 1, 5, 5, 10, 10, 5, 10, 2, 1]
-        XCTAssertEqual(numbers.selectionSorted(), [1, 1, 2, 2, 2, 3, 3, 5, 5, 5, 10, 10, 10])
+        let numbers = [100, 100, 2, 2, 1, 78, 78, 10, 10, 5, 10, 2, 1]
+        XCTAssertEqual(numbers.selectionSorted(), [1, 1, 2, 2, 2, 5, 10, 10, 10, 78, 78, 100, 100])
     }
 }
