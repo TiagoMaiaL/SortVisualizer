@@ -20,6 +20,7 @@
 		5AA7450F263CD88200E74021 /* SortVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7450E263CD88200E74021 /* SortVisualizerView.swift */; };
 		5AA74511263CD88600E74021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA74510263CD88600E74021 /* Assets.xcassets */; };
 		5AA74514263CD88600E74021 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA74513263CD88600E74021 /* Preview Assets.xcassets */; };
+		5ABC83E726423A0A00069A34 /* SortVisualizerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC83E626423A0A00069A34 /* SortVisualizerViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5AA74513263CD88600E74021 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5AA74515263CD88600E74021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA74516263CD88600E74021 /* SortVisualizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SortVisualizer.entitlements; sourceTree = "<group>"; };
+		5ABC83E626423A0A00069A34 /* SortVisualizerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVisualizerViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +76,8 @@
 		5A4D83AE263F55A800B871FA /* SortVisualizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A4D83AF263F55A800B871FA /* SelectionSortTests.swift */,
-				5A4D83D1263F6FF000B871FA /* InsertionSortTests.swift */,
-				5A4D83D7263F8ABE00B871FA /* BubbleSortTests.swift */,
-				5A4D83BF263F6D5D00B871FA /* ListToStringTests.swift */,
+				5ABC83E5264239EA00069A34 /* ViewModelTests */,
+				5ABC83E4264239D000069A34 /* ExtensionTests */,
 				5A4D83B1263F55A800B871FA /* Info.plist */,
 			);
 			path = SortVisualizerTests;
@@ -157,6 +157,25 @@
 				5AA74513263CD88600E74021 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5ABC83E4264239D000069A34 /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A4D83AF263F55A800B871FA /* SelectionSortTests.swift */,
+				5A4D83D1263F6FF000B871FA /* InsertionSortTests.swift */,
+				5A4D83D7263F8ABE00B871FA /* BubbleSortTests.swift */,
+				5A4D83BF263F6D5D00B871FA /* ListToStringTests.swift */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
+		5ABC83E5264239EA00069A34 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC83E626423A0A00069A34 /* SortVisualizerViewModelTests.swift */,
+			);
+			path = ViewModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +280,7 @@
 				5A4D83C0263F6D5D00B871FA /* ListToStringTests.swift in Sources */,
 				5A4D83B0263F55A800B871FA /* SelectionSortTests.swift in Sources */,
 				5A4D83D2263F6FF000B871FA /* InsertionSortTests.swift in Sources */,
+				5ABC83E726423A0A00069A34 /* SortVisualizerViewModelTests.swift in Sources */,
 				5A4D83D8263F8ABE00B871FA /* BubbleSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
