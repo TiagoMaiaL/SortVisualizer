@@ -23,7 +23,17 @@ struct SortVisualizerView: View {
         VStack {
             Spacer()
             
-            ListInputView(rawInput: $input) { rawInput in
+            let rawInputBinding = Binding<String> { () -> String in
+                input
+            } set: {
+                input = $0
+                viewModel.validate(input)
+            }
+            
+            ListInputView(
+                rawInput: rawInputBinding,
+                isSortButtonEnabled: viewModel.isInputValid
+            ) { rawInput in
                 let list = viewModel.parse(rawInput)
                 viewModel.sort(list)
             }

@@ -24,6 +24,9 @@ final class SortVisualizerViewModel: ObservableObject {
     @Published
     private(set) var sortedList: String = ""
     
+    @Published
+    private(set) var isInputValid: Bool = false
+    
     // MARK: Imperatives
     
     func sort(_ list: [Int]) {
@@ -37,6 +40,11 @@ final class SortVisualizerViewModel: ObservableObject {
             .split(separator: ",")
             .map { $0.trimmingCharacters(in: .whitespaces) }
             .compactMap { Int($0) }
+    }
+    
+    func validate(_ rawInput: String) {
+        let parsedList = parse(rawInput)
+        isInputValid = !parsedList.isEmpty
     }
     
     // MARK: Private methods

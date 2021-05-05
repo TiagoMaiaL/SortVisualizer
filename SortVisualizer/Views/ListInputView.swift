@@ -11,15 +11,22 @@ struct ListInputView: View {
     
     // MARK: Properties
     
-    private var listRawInput: Binding<String>
+    private let listRawInput: Binding<String>
     
-    private var tapHandler: ((String) -> Void)?
+    private let sortButtonTapHandler: ((String) -> Void)?
+    
+    private let isSortButtonEnabled: Bool
     
     // MARK: Initializer
     
-    init(rawInput: Binding<String>, tapHandler: ((String) -> Void)? = nil) {
+    init(
+        rawInput: Binding<String>,
+        isSortButtonEnabled: Bool = true,
+        sortButtonTapHandler: ((String) -> Void)? = nil
+    ) {
         self.listRawInput = rawInput
-        self.tapHandler = tapHandler
+        self.sortButtonTapHandler = sortButtonTapHandler
+        self.isSortButtonEnabled = isSortButtonEnabled
     }
     
     // MARK: Body
@@ -30,8 +37,9 @@ struct ListInputView: View {
             TextField("Example: 1, 102, 521, 23, 15, 2, 125", text: listRawInput)
                 .font(.system(size: 10))
             Button("Sort") {
-                tapHandler?(listRawInput.wrappedValue)
+                sortButtonTapHandler?(listRawInput.wrappedValue)
             }
+            .disabled(!isSortButtonEnabled)
         }
     }
 }
