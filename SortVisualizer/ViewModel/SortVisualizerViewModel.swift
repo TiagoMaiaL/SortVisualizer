@@ -32,6 +32,13 @@ final class SortVisualizerViewModel: ObservableObject {
         computeInsertionSort(for: list)
     }
     
+    func parse(_ rawInput: String) -> [Int] {
+        rawInput
+            .split(separator: ",")
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .compactMap { Int($0) }
+    }
+    
     // MARK: Private methods
     
     private func computeBubbleSort(for list: [Int]) {
@@ -46,7 +53,7 @@ final class SortVisualizerViewModel: ObservableObject {
     }
     
     private func computeSelectionSort(for list: [Int]) {
-        performOperation { 
+        performOperation {
             _ = list.selectionSorted()
         } measuringTime: { secondsText in
             selectionSortTime = secondsText
@@ -54,7 +61,7 @@ final class SortVisualizerViewModel: ObservableObject {
     }
     
     private func computeInsertionSort(for list: [Int]) {
-        performOperation { 
+        performOperation {
             _ = list.insertionSorted()
         } measuringTime: { secondsText in
             insertionSortTime = secondsText

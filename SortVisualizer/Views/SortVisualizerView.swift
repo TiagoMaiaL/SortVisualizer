@@ -24,7 +24,7 @@ struct SortVisualizerView: View {
             Spacer()
             
             ListInputView(rawInput: $input) { rawInput in
-                let list = parse(rawInput)
+                let list = viewModel.parse(rawInput)
                 viewModel.sort(list)
             }
             SortResultsView(
@@ -37,15 +37,6 @@ struct SortVisualizerView: View {
             Spacer()
         }
         .padding()
-    }
-    
-    // MARK: Internal Methods
-    
-    private func parse(_ input: String) -> [Int] {
-        input
-            .split(separator: ",")
-            .map { $0.trimmingCharacters(in: .whitespaces) }
-            .compactMap { Int($0) }
     }
 }
 
