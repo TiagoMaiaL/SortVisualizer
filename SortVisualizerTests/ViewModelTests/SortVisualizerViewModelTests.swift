@@ -57,4 +57,31 @@ class SortVisualizerViewModelTests: XCTestCase {
         let numbersList = viewModel.parse(rawInput)
         XCTAssertEqual(numbersList, [123])
     }
+    
+    func testValidatingEmptyArrayShouldBeInvalid() {
+        viewModel.validate("")
+        XCTAssertFalse(viewModel.isInputValid)
+    }
+    
+    func testValidatingInputWithLettersOnlyShouldBeInvalid() {
+        viewModel.validate("asdf")
+        XCTAssertFalse(viewModel.isInputValid)
+    }
+    
+    func testValidatingInputWithLettersAndOneNumberShouldBeValid() {
+        viewModel.validate("asdfs, 123")
+        XCTAssertTrue(viewModel.isInputValid)
+    }
+    
+    func testValidatingInputWithNumberAmongLettersShouldBeValid() {
+        viewModel.validate("asdfasdf, 444, asdfaf")
+        XCTAssertTrue(viewModel.isInputValid)
+    }
+    
+    func testValidatingInputWithNumbersShouldBeValid() {
+        viewModel.validate("123, 123, 442, 14, 65")
+        XCTAssertTrue(viewModel.isInputValid)
+    }
+    
+    // TODO: Add tests for sorting the lists.
 }
