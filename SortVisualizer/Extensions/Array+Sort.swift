@@ -46,9 +46,7 @@ extension Array where Element: Comparable {
             }
             
             if needsChange {
-                let temp = copy[i]
-                copy[i] = lowest.value
-                copy[lowest.index] = temp
+                copy.swapAt(i, lowest.index)
             }
         }
         
@@ -72,14 +70,15 @@ extension Array where Element: Comparable {
                     
                 } else if j == sorted.count - 1, currentElement > sorted[j] {
                     sorted.append(currentElement)
-                    break
-                    
-                } else {
-                    continue
+                    break   
                 }
             }
         }
         
         return sorted
     }
+    
+    // TODO: Create mutable variants for the sort methods.
+    // TODO: Refactor the sorted() methods to use the mutable ones in their copies.
+    // TODO: Add a quick sort method.
 }
