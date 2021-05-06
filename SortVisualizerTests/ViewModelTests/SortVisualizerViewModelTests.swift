@@ -83,5 +83,45 @@ class SortVisualizerViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.isInputValid)
     }
     
-    // TODO: Add tests for sorting the lists.
+    func testSortingPublishesSortedListText() {
+        let input = [5, 23, 44, 12, 2, 4, 1]
+        
+        viewModel.sort(input)
+        
+        let expectedSortedListText = input
+            .sorted()
+            .map { "\($0), " }
+            .reduce("", +)
+            .dropLast(2)
+        
+        XCTAssertEqual(String(expectedSortedListText), viewModel.sortedList)
+    }
+    
+    func testSortingPublishesEmpiricalSortTimes() {
+        let input = [5231, 123, 255, 32, 1, 5992, 12]
+        
+        viewModel.sort(input)
+        
+        XCTAssertTrue(viewModel.bubbleSortTime.contains("Nanoseconds"))
+        XCTAssertTrue(viewModel.selectionSortTime.contains("Nanoseconds"))
+        XCTAssertTrue(viewModel.insertionSortTime.contains("Nanoseconds"))
+        
+        [viewModel.bubbleSortTime,
+         viewModel.selectionSortTime,
+         viewModel.insertionSortTime
+        ].forEach {
+            XCTAssertTrue($0.isSortTimeTextValid)
+        }
+    }
+}
+
+// MARK: - Helper Test Extension
+
+private extension String {
+    var isSortTimeTextValid: Bool {
+        !self.map(String.init)
+            .compactMap(Int.init)
+            .filter { $0 > 0 }
+            .isEmpty
+    }
 }
