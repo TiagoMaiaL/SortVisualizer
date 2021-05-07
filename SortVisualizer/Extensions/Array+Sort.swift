@@ -8,24 +8,32 @@
 import Foundation
 
 extension Array where Element: Comparable {
-
-    func bubbleSorted() -> Self {
+    
+    // MARK: Bubble Sort
+    
+    mutating func bubbleSort() {
         guard count > 1 else {
-            return self
+            return
         }
         
-        var copy = self
-        
-        for _ in 0 ..< copy.count {
-            for j in 1 ..< copy.count {
-                if copy[j - 1] > copy[j] {
-                    copy.swapAt(j - 1, j)
+        for _ in 0 ..< count {
+            for j in 1 ..< count {
+                if self[j - 1] > self[j] {
+                    swapAt(j - 1, j)
                 }
             }
         }
+    }
+
+    func bubbleSorted() -> Self {
+        var copy = self
+        
+        copy.bubbleSort()
         
         return copy
     }
+    
+    // MARK: Selection Sort
     
     func selectionSorted() -> Self {
         guard count > 1 else {
@@ -52,6 +60,8 @@ extension Array where Element: Comparable {
         
         return copy
     }
+    
+    // MARK: Insertion Sort
     
     func insertionSorted() -> Self {
         guard count > 1 else {

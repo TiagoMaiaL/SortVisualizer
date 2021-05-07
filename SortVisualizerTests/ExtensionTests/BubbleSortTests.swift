@@ -51,5 +51,10 @@ class BubbleSortTests: XCTestCase {
         let numbers = [161, 161, 161, 195, 195, 195, 130, 13, 99, 80, 120, 120]
         XCTAssertEqual(numbers.bubbleSorted(), [13, 80, 99, 120, 120, 130, 161, 161, 161, 195, 195, 195])
     }
-
+    
+    func testSortingWithMutableVersion() {
+        var numbers = [255, 23, 12, 66, 8]
+        numbers.bubbleSort()
+        XCTAssertEqual([8, 12, 23, 66, 255], numbers)
+    }
 }
