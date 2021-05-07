@@ -16,11 +16,18 @@ extension Array where Element: Comparable {
             return
         }
         
-        for _ in 0 ..< count {
-            for j in 1 ..< count {
+        for i in 0 ..< count {
+            var isSortFinished = true
+            
+            for j in 1 ..< count - i {
                 if self[j - 1] > self[j] {
+                    isSortFinished = false
                     swapAt(j - 1, j)
                 }
+            }
+            
+            if isSortFinished {
+                break
             }
         }
     }
