@@ -70,29 +70,30 @@ extension Array where Element: Comparable {
     
     // MARK: Insertion Sort
     
-    func insertionSorted() -> Self {
+    mutating func insertionSort() {
         guard count > 1 else {
-            return self
+            return
         }
-
-        var sorted = [self[0]]
         
         for i in 1 ..< count {
-            let currentElement = self[i]
+            let nextUnsorted = self[i]
+            var insertionIndex = i
             
-            for j in 0 ..< sorted.count {
-                if currentElement <= sorted[j] {
-                    sorted.insert(currentElement, at: j)
-                    break
-                    
-                } else if j == sorted.count - 1, currentElement > sorted[j] {
-                    sorted.append(currentElement)
-                    break   
+            for j in (0 ..< i).reversed() {
+                if self[j] > nextUnsorted {
+                    swapAt(j, insertionIndex)
+                    insertionIndex = j
                 }
             }
         }
+    }
+    
+    func insertionSorted() -> Self {
+        var copy = self
         
-        return sorted
+        copy.insertionSort()
+        
+        return copy
     }
     
     // TODO: Create mutable variants for the sort methods.

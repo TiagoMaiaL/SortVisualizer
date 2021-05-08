@@ -51,4 +51,11 @@ class InsertionSortTests: XCTestCase {
         let numbers = [3, 3, 2, 2, 1, 5, 5, 10, 10, 5, 10, 2, 1]
         XCTAssertEqual(numbers.insertionSorted(), [1, 1, 2, 2, 2, 3, 3, 5, 5, 5, 10, 10, 10])
     }
+    
+    func testSortingWithMutableVersion() {
+        var numbers = [567, 2343, 242, 16, 2]
+        numbers.insertionSort()
+        XCTAssertEqual([2, 16, 242, 567, 2343], numbers)
+    }
+
 }
