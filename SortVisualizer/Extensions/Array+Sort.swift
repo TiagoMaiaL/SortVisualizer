@@ -98,5 +98,18 @@ extension Array where Element: Comparable {
         return copy
     }
     
-    // TODO: Add a quick sort method.
+    // MARK: Quick Sort
+    
+    func quickSorted() -> Self {
+        guard count > 1 else {
+            return self
+        }
+        
+        let pivot = self[count / 2]
+        let smaller = filter { $0 < pivot }
+        let equal = filter { $0 == pivot }
+        let greater = filter { $0 > pivot }
+        
+        return smaller.quickSorted() + equal + greater.quickSorted()
+    }
 }
