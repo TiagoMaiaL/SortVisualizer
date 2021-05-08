@@ -42,28 +42,30 @@ extension Array where Element: Comparable {
     
     // MARK: Selection Sort
     
-    func selectionSorted() -> Self {
+    mutating func selectionSort() {
         guard count > 1 else {
-            return self
+            return
         }
         
-        var copy = self
-        
-        for i in 0 ..< copy.count {
-            var needsChange = false
-            var lowest: (index: Int, value: Element) = (index: i, value: copy[i])
+        for i in 0 ..< count {
+            var lowest: (index: Int, value: Element) = (i, self[i])
             
-            for j in i ..< copy.count {
-                if lowest.value > copy[j] {
-                    lowest = (index: j, value: copy[j])
-                    needsChange = true
+            for j in i + 1 ..< count {
+                if self[j] < lowest.value {
+                    lowest = (j, self[j])
                 }
             }
             
-            if needsChange {
-                copy.swapAt(i, lowest.index)
+            if self[i] != lowest.value {
+                swapAt(i, lowest.index)
             }
         }
+    }
+    
+    func selectionSorted() -> Self {
+        var copy = self
+        
+        copy.selectionSort()
         
         return copy
     }
@@ -96,7 +98,5 @@ extension Array where Element: Comparable {
         return copy
     }
     
-    // TODO: Create mutable variants for the sort methods.
-    // TODO: Refactor the sorted() methods to use the mutable ones in their copies.
     // TODO: Add a quick sort method.
 }

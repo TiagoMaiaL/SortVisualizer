@@ -51,4 +51,10 @@ class SelectionSortTests: XCTestCase {
         let numbers = [100, 100, 2, 2, 1, 78, 78, 10, 10, 5, 10, 2, 1]
         XCTAssertEqual(numbers.selectionSorted(), [1, 1, 2, 2, 2, 5, 10, 10, 10, 78, 78, 100, 100])
     }
+    
+    func testSortingWithMutableVersion() {
+        var numbers = [1225, 233, 55, 3552, 23]
+        numbers.selectionSort()
+        XCTAssertEqual([23, 55, 233, 1225, 3552], numbers)
+    }
 }

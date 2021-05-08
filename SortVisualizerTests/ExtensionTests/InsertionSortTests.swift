@@ -57,5 +57,4 @@ class InsertionSortTests: XCTestCase {
         numbers.insertionSort()
         XCTAssertEqual([2, 16, 242, 567, 2343], numbers)
     }
-
 }
