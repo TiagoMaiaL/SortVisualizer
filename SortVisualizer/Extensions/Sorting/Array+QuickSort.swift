@@ -33,6 +33,9 @@ extension Array where Element: Comparable {
         from left: Int,
         to right: Int
     ) -> Int {
+        let pivotIndex = Int.random(in: left...right)
+        swapAt(pivotIndex, right)
+        
         let pivot = self[right]
         var i = left
         
