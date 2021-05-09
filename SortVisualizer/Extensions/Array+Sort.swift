@@ -100,16 +100,46 @@ extension Array where Element: Comparable {
     
     // MARK: Quick Sort
     
-    func quickSorted() -> Self {
+    mutating func quickSort() {
         guard count > 1 else {
-            return self
+            return
         }
         
-        let pivot = self[count / 2]
-        let smaller = filter { $0 < pivot }
-        let equal = filter { $0 == pivot }
-        let greater = filter { $0 > pivot }
+        _quickSort(from: 0, to: count - 1)
+    }
+    
+    mutating private func _quickSort(
+        from startIndex: Int,
+        to endIndex: Int
+    ) {
+        guard startIndex < endIndex, endIndex - startIndex > 0 else {
+            return
+        }
         
-        return smaller.quickSorted() + equal + greater.quickSorted()
+        var pivotIndex = startIndex + ((endIndex - startIndex) / 2)
+        
+        swapAt(startIndex, pivotIndex)
+        pivotIndex = startIndex
+        
+        let pivot = self[pivotIndex]
+        
+        for i in startIndex + 1 ... endIndex {
+            if pivot > self[i] {
+                let smallerElement = remove(at: i)
+                insert(smallerElement, at: startIndex)
+                pivotIndex += 1
+            }
+        }
+        
+        _quickSort(from: startIndex, to: pivotIndex - 1)
+        _quickSort(from: pivotIndex + 1, to: endIndex)
+    }
+    
+    func quickSorted() -> Self {
+        var copy = self
+        
+        copy.quickSort()
+        
+        return copy
     }
 }
