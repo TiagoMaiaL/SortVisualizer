@@ -56,4 +56,10 @@ class QuickSortTests: XCTestCase {
         let numbers = [190, 11, 190, 11, 25, 78, 67, 78, 25, 5, 10, 2, 5]
         XCTAssertEqual(numbers.quickSorted(), [2, 5, 5, 10, 11, 11, 25, 25, 67, 78, 78, 190, 190])
     }
+    
+    func testSortingWithMutableVersion() {
+        var numbers = [21, 1000, 122, 16, 8]
+        numbers.quickSort()
+        XCTAssertEqual([8, 16, 21, 122, 1000], numbers)
+    }
 }
