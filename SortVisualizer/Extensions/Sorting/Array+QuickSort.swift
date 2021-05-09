@@ -24,29 +24,28 @@ extension Array where Element: Comparable {
             return
         }
         
-        var pivotIndex = left + ((right - left) / 2)
-        partition(around: &pivotIndex, from: left, to: right)
+        let pivotIndex = partition(from: left, to: right)
         _quickSort(from: left, to: pivotIndex - 1)
         _quickSort(from: pivotIndex + 1, to: right)
     }
     
     mutating private func partition(
-        around pivotIndex: inout Int,
         from left: Int,
         to right: Int
-    ) {
-        swapAt(left, pivotIndex)
-        pivotIndex = left
+    ) -> Int {
+        let pivot = self[right]
+        var i = left
         
-        let pivot = self[pivotIndex]
-        
-        for i in left + 1 ... right {
-            if pivot > self[i] {
-                let smallerElement = remove(at: i)
-                insert(smallerElement, at: left)
-                pivotIndex += 1
+        for j in i ..< right {
+            if self[j] <= pivot {
+                swapAt(i, j)
+                i += 1
             }
         }
+        
+        swapAt(i, right)
+        
+        return i
     }
     
     func quickSorted() -> Self {
