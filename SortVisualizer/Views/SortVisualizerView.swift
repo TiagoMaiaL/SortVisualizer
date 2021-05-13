@@ -40,7 +40,8 @@ struct SortVisualizerView: View {
             SortResultsView(
                 bubbleSortTime: viewModel.bubbleSortTime, 
                 insertionSortTime: viewModel.insertionSortTime, 
-                selectionSortTime: viewModel.selectionSortTime, 
+                selectionSortTime: viewModel.selectionSortTime,
+                quickSortTime: viewModel.quickSortTime,
                 sortedListText: viewModel.sortedList
             )
             

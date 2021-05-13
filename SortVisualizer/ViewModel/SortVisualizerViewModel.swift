@@ -22,6 +22,9 @@ final class SortVisualizerViewModel: ObservableObject {
     private(set) var insertionSortTime: String = ""
     
     @Published
+    private(set) var quickSortTime: String = ""
+    
+    @Published
     private(set) var sortedList: String = ""
     
     @Published
@@ -33,6 +36,7 @@ final class SortVisualizerViewModel: ObservableObject {
         computeBubbleSort(for: list)
         computeSelectionSort(for: list)
         computeInsertionSort(for: list)
+        computeQuickSort(for: list)
     }
     
     func parse(_ rawInput: String) -> [Int] {
@@ -73,6 +77,14 @@ final class SortVisualizerViewModel: ObservableObject {
             _ = list.insertionSorted()
         } measuringTime: { secondsText in
             insertionSortTime = secondsText
+        }
+    }
+    
+    private func computeQuickSort(for list: [Int]) {
+        performOperation {
+            _ = list.quickSorted()
+        } measuringTime: { secondsText in
+            quickSortTime = secondsText
         }
     }
     

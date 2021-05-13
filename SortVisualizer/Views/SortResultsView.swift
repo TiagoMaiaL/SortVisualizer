@@ -16,6 +16,8 @@ struct SortResultsView: View {
     var insertionSortTime: String
     
     var selectionSortTime: String
+    
+    var quickSortTime: String
 
     var sortedListText: String
     
@@ -24,22 +26,27 @@ struct SortResultsView: View {
     var body: some View {
         VStack(spacing: 5) {
             HStack {
-                Text("Bubble sort time: ")
+                Text("Bubble sort time:")
                 Text(bubbleSortTime)
             }
             
             HStack {
-                Text("Insertion sort time: ")
+                Text("Insertion sort time:")
                 Text(insertionSortTime)
             }
             
             HStack {
-                Text("Selection sort time: ")
+                Text("Selection sort time:")
                 Text(selectionSortTime)
             }
             
             HStack {
-                Text("Sorted list: ")
+                Text("Quick sort time:")
+                Text(quickSortTime)
+            }
+            
+            HStack {
+                Text("Sorted list:")
                 Text(sortedListText)
             }
         }
@@ -55,13 +62,16 @@ struct SortResultsView_Previews: PreviewProvider {
     
     private static var selectionSortTime: String = "6 secs"
     
+    private static var quickSortTime: String = "2 secs"
+    
     private static var sortedListText: String = "1, 2, 5, 6, 8, 10, 12, 24, 2004, 21234"
     
     static var previews: some View {
         SortResultsView(
             bubbleSortTime: bubbleSortTime, 
             insertionSortTime: insertionSortTime, 
-            selectionSortTime: selectionSortTime, 
+            selectionSortTime: selectionSortTime,
+            quickSortTime: quickSortTime,
             sortedListText: sortedListText
         )
     }
