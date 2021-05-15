@@ -39,40 +39,16 @@ struct SortResultsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: listVerticalSpace) {
             timeResultViews
-            
-            HStack {
-                Text(Localizable.sortedList)
-                Text(sortedListText)
-                    .bold()
-            }
+            KeyValueView(key: Localizable.sortedList, value: sortedListText)
         }
     }
     
     private var timeResultViews: some View {
         VStack(alignment: .leading, spacing: timingVerticalSpace) {
-            HStack {
-                Text(Localizable.bubbleSort)
-                Text(bubbleSortTime)
-                    .bold()
-            }
-            
-            HStack {
-                Text(Localizable.insertionSort)
-                Text(insertionSortTime)
-                    .bold()
-            }
-            
-            HStack {
-                Text(Localizable.selectionSort)
-                Text(selectionSortTime)
-                    .bold()
-            }
-            
-            HStack {
-                Text(Localizable.quickSort)
-                Text(quickSortTime)
-                    .bold()
-            }
+            KeyValueView(key: Localizable.bubbleSort, value: bubbleSortTime)
+            KeyValueView(key: Localizable.insertionSort, value: insertionSortTime)
+            KeyValueView(key: Localizable.selectionSort, value: selectionSortTime)
+            KeyValueView(key: Localizable.quickSort, value: quickSortTime)
         }
     }
 }

@@ -13,19 +13,19 @@ final class SortVisualizerViewModel: ObservableObject {
     // MARK: Properties
     
     @Published
-    private(set) var bubbleSortTime: String = "-"
+    private(set) var bubbleSortTime: String = ""
     
     @Published
-    private(set) var selectionSortTime: String = "-"
+    private(set) var selectionSortTime: String = ""
     
     @Published
-    private(set) var insertionSortTime: String = "-"
+    private(set) var insertionSortTime: String = ""
     
     @Published
-    private(set) var quickSortTime: String = "-"
+    private(set) var quickSortTime: String = ""
     
     @Published
-    private(set) var sortedList: String = "-"
+    private(set) var sortedList: String = ""
     
     @Published
     private(set) var isInputValid: Bool = false

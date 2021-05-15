@@ -25,6 +25,7 @@
 		5AAB214B26483F0A001EF3BB /* Array+QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB214A26483F0A001EF3BB /* Array+QuickSort.swift */; };
 		5AAF2EE72646F47100EB30DA /* QuickSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF2EE62646F47100EB30DA /* QuickSortTests.swift */; };
 		5ABC83E726423A0A00069A34 /* SortVisualizerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC83E626423A0A00069A34 /* SortVisualizerViewModelTests.swift */; };
+		5AD3F438264F71B50097498E /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3F437264F71B50097498E /* KeyValueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5AAB214A26483F0A001EF3BB /* Array+QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+QuickSort.swift"; sourceTree = "<group>"; };
 		5AAF2EE62646F47100EB30DA /* QuickSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSortTests.swift; sourceTree = "<group>"; };
 		5ABC83E626423A0A00069A34 /* SortVisualizerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVisualizerViewModelTests.swift; sourceTree = "<group>"; };
+		5AD3F437264F71B50097498E /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				5AA7450E263CD88200E74021 /* SortVisualizerView.swift */,
 				5A4D8399263CE4E900B871FA /* ListInputView.swift */,
 				5A4D839C263CE6F500B871FA /* SortResultsView.swift */,
+				5AD3F437264F71B50097498E /* KeyValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				5AAB214326483E8D001EF3BB /* Array+SelectionSort.swift in Sources */,
 				5AA7450F263CD88200E74021 /* SortVisualizerView.swift in Sources */,
+				5AD3F438264F71B50097498E /* KeyValueView.swift in Sources */,
 				5A4D83CA263F6DF700B871FA /* Array+DisplayText.swift in Sources */,
 				5AAB214726483EDE001EF3BB /* Array+InsertionSort.swift in Sources */,
 				5A4D839D263CE6F500B871FA /* SortResultsView.swift in Sources */,
