@@ -9,6 +9,19 @@ import SwiftUI
 
 struct SortResultsView: View {
     
+    // MARK: Constants
+    
+    private let timingVerticalSpace: CGFloat = 2
+    private let listVerticalSpace: CGFloat = 15
+    
+    private enum Localizable {
+        static let sortedList = "Sorted list:"
+        static let bubbleSort = "Bubble sort time:"
+        static let insertionSort = "Sorted list:"
+        static let selectionSort = "Sorted list:"
+        static let quickSort = "Sorted list:"
+    }
+    
     // MARK: Properties
     
     var bubbleSortTime: String
@@ -24,30 +37,41 @@ struct SortResultsView: View {
     // MARK: Body
     
     var body: some View {
-        VStack(spacing: 5) {
-            HStack {
-                Text("Bubble sort time:")
-                Text(bubbleSortTime)
-            }
+        VStack(alignment: .leading, spacing: listVerticalSpace) {
+            timeResultViews
             
             HStack {
-                Text("Insertion sort time:")
-                Text(insertionSortTime)
-            }
-            
-            HStack {
-                Text("Selection sort time:")
-                Text(selectionSortTime)
-            }
-            
-            HStack {
-                Text("Quick sort time:")
-                Text(quickSortTime)
-            }
-            
-            HStack {
-                Text("Sorted list:")
+                Text(Localizable.sortedList)
                 Text(sortedListText)
+                    .bold()
+            }
+        }
+    }
+    
+    private var timeResultViews: some View {
+        VStack(alignment: .leading, spacing: timingVerticalSpace) {
+            HStack {
+                Text(Localizable.bubbleSort)
+                Text(bubbleSortTime)
+                    .bold()
+            }
+            
+            HStack {
+                Text(Localizable.insertionSort)
+                Text(insertionSortTime)
+                    .bold()
+            }
+            
+            HStack {
+                Text(Localizable.selectionSort)
+                Text(selectionSortTime)
+                    .bold()
+            }
+            
+            HStack {
+                Text(Localizable.quickSort)
+                Text(quickSortTime)
+                    .bold()
             }
         }
     }

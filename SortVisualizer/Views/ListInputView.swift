@@ -9,6 +9,16 @@ import SwiftUI
 
 struct ListInputView: View {
     
+    // MARK: Constants
+    
+    private let listInputFontSize: CGFloat = 10
+    
+    private enum Localizable {
+        static let instruction = "Type here the numbers to be sorted, separated by commas:"
+        static let sortButtonTitle = "Sort"
+        static let listInputExample = "Example: 1, 102, 521, 23, 15, 2, 125"
+    }
+    
     // MARK: Properties
     
     private let listRawInput: Binding<String>
@@ -32,13 +42,16 @@ struct ListInputView: View {
     // MARK: Body
     
     var body: some View {
-        VStack {
-            Text("Type here the numbers to be sorted, separated by commas, making sure they're correctly typed:")
-            TextField("Example: 1, 102, 521, 23, 15, 2, 125", text: listRawInput)
-                .font(.system(size: 10))
-            Button("Sort") {
+        VStack(alignment: .leading) {
+            Text(Localizable.instruction)
+            
+            TextField(Localizable.listInputExample, text: listRawInput)
+                .font(.system(size: listInputFontSize))
+            
+            Button(Localizable.sortButtonTitle) {
                 sortButtonTapHandler?(listRawInput.wrappedValue)
             }
+            
             .disabled(!isSortButtonEnabled)
         }
     }

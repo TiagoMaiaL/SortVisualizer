@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SortVisualizerView: View {
+    
+    // MARK: Constants
+    
+    private let verticalSpacing: CGFloat = 30
 
     // MARK: Properties
     
@@ -20,7 +24,7 @@ struct SortVisualizerView: View {
     // MARK: Body
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: verticalSpacing) {
             Spacer()
             
             let rawInputBinding = Binding<String> { () -> String in
