@@ -97,6 +97,17 @@ class SortVisualizerViewModelTests: XCTestCase {
         XCTAssertEqual(String(expectedSortedListText), viewModel.sortedList)
     }
     
+    func testThatSortingTimesAreInitiallyUndetermined() {
+        XCTAssertEqual(viewModel.bubbleSortTime, "-")
+        XCTAssertEqual(viewModel.insertionSortTime, "-")
+        XCTAssertEqual(viewModel.selectionSortTime, "-")
+        XCTAssertEqual(viewModel.quickSortTime, "-")
+    }
+    
+    func testThatSortedArrayIsInitiallyUndetermined() {
+        XCTAssertEqual(viewModel.sortedList, "-")
+    }
+    
     func testSortingPublishesEmpiricalSortTimes() {
         let input = [5231, 123, 255, 32, 1, 5992, 12]
         

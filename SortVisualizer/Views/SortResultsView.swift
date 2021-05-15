@@ -17,9 +17,9 @@ struct SortResultsView: View {
     private enum Localizable {
         static let sortedList = "Sorted list:"
         static let bubbleSort = "Bubble sort time:"
-        static let insertionSort = "Sorted list:"
-        static let selectionSort = "Sorted list:"
-        static let quickSort = "Sorted list:"
+        static let insertionSort = "Insertion sort time:"
+        static let selectionSort = "Selection sort time:"
+        static let quickSort = "Quick sort time:"
     }
     
     // MARK: Properties
