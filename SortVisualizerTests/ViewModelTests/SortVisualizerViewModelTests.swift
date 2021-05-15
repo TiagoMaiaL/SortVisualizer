@@ -105,10 +105,12 @@ class SortVisualizerViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.bubbleSortTime.contains("Nanoseconds"))
         XCTAssertTrue(viewModel.selectionSortTime.contains("Nanoseconds"))
         XCTAssertTrue(viewModel.insertionSortTime.contains("Nanoseconds"))
+        XCTAssertTrue(viewModel.quickSortTime.contains("Nanoseconds"))
         
         [viewModel.bubbleSortTime,
          viewModel.selectionSortTime,
-         viewModel.insertionSortTime
+         viewModel.insertionSortTime,
+         viewModel.quickSortTime
         ].forEach {
             XCTAssertTrue($0.isSortTimeTextValid)
         }
