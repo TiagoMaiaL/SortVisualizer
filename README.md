@@ -1,8 +1,16 @@
 
 # Sort Visualizer
 
-A simple MacOS app that sorts the user input using three different sort algorithms: bubble sort, selection sort, and insertion sort. It also computes the time of each sort operation.
+An app that performs empirical tests on different sorting algorithms, displaying the time each one took to sort the entered list of numbers.
 
-# Screenshots
+## Covered sorting algorithms
 
-<img src="./screenshots/list-sort-algorithms.png" width=400px />
+- Bubble sort
+- Insertion sort
+- Selection sort
+- Quick sort
+- Merge sort [TODO]
+
+## Screenshots
+
+<img src="./screenshots/sort-visualizer.png" width=400px />

@@ -88,6 +88,8 @@ final class SortVisualizerViewModel: ObservableObject {
         }
     }
     
+    // TODO: Add merge sort computation.
+    
     private func performOperation(_ operation: () -> Void, measuringTime timeTextHandler: (String) -> Void) {
         let start = DispatchTime.now().uptimeNanoseconds
         operation()
